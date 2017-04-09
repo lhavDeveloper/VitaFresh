@@ -1,0 +1,995 @@
+body
+{
+background-color: white;
+font-family: 'Harmattan', sans-serif;
+color:#36545f;
+box-sizing: border-box;
+}
+
+h1{
+	color: black;
+}
+.pages
+{
+	height:100vh;
+	position: relative;
+	overflow: hidden;
+}
+
+.orange{
+	color:#c84111;
+}
+
+.removeRPadding{
+	padding-right: 0 !important;
+}
+
+.arrow-up {
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid black;
+  cursor: pointer;
+}
+
+.arrow-left {
+  width: 0; 
+  height: 0; 
+  border-top: 30px solid transparent;
+  border-right: 30px solid black;
+  border-bottom: 30px solid transparent;
+  cursor: pointer;
+}
+
+.arrow-right {
+  width: 0; 
+  height: 0; 
+  border-left: 30px solid black;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  cursor: pointer;
+}
+
+.arrow-down {
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  
+  border-top: 5px solid black;
+  cursor: pointer;
+}
+
+.backgroundImage
+{
+	background: #ffffff 100% 100% url("images/mainBg.jpg") repeat ; 
+	opacity:0.2;
+	position:absolute;
+	height:100%;
+	width:100%;
+	overflow:hidden;
+}
+
+#topStrip .glyphicon
+{
+color:white;
+padding-right:10px;
+top:3px;
+} 
+
+.freeBlocks
+{
+padding-top: 10px;
+float:left;
+margin-left:30px;
+}
+
+#topStrip
+{
+	position: relative;
+	background-color: black;
+	height:40px;
+	color:ghostwhite;
+	font-size:16px;
+}
+
+#logo{
+     position:absolute;
+     top:40px;
+     left:10%;
+     height:120px;
+     width:160px;
+     background-color:black;
+     z-index:100;
+}
+
+
+#phoneNumber{
+position: absolute;
+left: 0;
+top: 10px;
+color:black;
+margin-top: 5px;
+}
+
+#phoneNumber > *{
+float:left;
+}
+
+#phoneNumber > .glyphicon{
+padding-left: 10px;
+padding-right: 10px;
+}
+
+.navbar-header
+{
+	margin-left:15px;
+}
+
+.navbar-default {
+	background-color:black;
+	background-color:rgba(107, 167, 189, 0.3);
+	border-color: rgba(107, 167, 189, 0.3);
+	}
+
+.navbar-default .navbar-nav>li>a
+{
+	color:#000;
+	font-size:1.3em;
+	transition: color 0.3s ease;
+	text-transform: uppercase;
+
+}
+
+.navbar-default .navbar-nav>.active>a,.navbar-default .navbar-nav>.active>a:hover {
+	color:#c84111;
+	background-color:rgba(0, 0, 0, 0);
+}
+
+#contactDiv{
+position:absolute;
+right:0;
+z-index:100;
+}
+
+.blackGlassButton{
+	
+	margin:15px;
+	position:relative;
+	border-radius:50%;
+	height:50px;
+	width:50px;
+	background-color: black; /*for compatibility with older browsers*/
+	background-image: linear-gradient(black 60%,gray);
+}
+
+.blackGlassButton:focus{
+	outline:none;
+}
+
+.blackGlassButton > i{
+	font-size:25px;
+	color:white;
+	padding-top: 5px;
+}
+
+.blackGlassButton:after{
+	content: '';
+	position: absolute;
+	top:0;
+	left:15%;
+	width: 70%;
+	height: 50%;
+	background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0));
+	border-radius:50%;
+	
+}
+
+#contactDiv > .blackGlassButton{
+	display: block;
+}
+
+main-slider{
+	position:relative;
+}
+
+#welcomeDiv{
+	position:relative;
+	text-transform: uppercase;
+	padding-top:12%;
+	color:#000000;
+	height:70vh;
+	overflow:hidden;
+}
+
+#welcomeDiv  h2{
+	font-family: 'Nixie One', cursive;
+	letter-spacing:15px;
+}
+
+#welcomeDiv  hr{
+width:13%;
+border-color:#c84111;
+opacity: 0.5;
+}
+
+#welcomeDiv  h1{
+	color:#36545f;
+	font-family: 'Open Sans', sans-serif;
+	font-size:4.5em;
+	font-weight:900;
+}
+
+#welcomeDiv h1 > span{
+	display:block;
+	line-height:1.5;
+}
+
+#welcomeDiv > .sliderDivs{
+	width:100%;
+text-align:center;
+position:absolute;
+}
+
+#welcomeDiv > .sliderDivs.ng-enter{
+left:100%;
+transition:left 1s linear;
+}
+
+#welcomeDiv > .sliderDivs.ng-enter-active{
+left:0%;
+}
+
+#welcomeDiv > .sliderDivs.ng-leave{
+left:0%;
+transition:left 1s linear;
+}
+
+#welcomeDiv > .sliderDivs.ng-leave.ng-leave-active{
+left:-100%;
+}
+
+#welcomeDiv > .navCircles{
+	position:absolute;
+	bottom:0;
+	margin-left: 48%;
+}
+
+#welcomeDiv > .navCircles > a{
+	display:inline-block;
+	margin-left:5px;
+	width:15px;
+	height:15px;
+	border-radius:50%;
+	background:none;
+	border:3px solid #c84111;
+	cursor:pointer;
+}
+
+#welcomeDiv > .navCircles > a.active{
+	border:3px solid black;
+}
+
+
+
+
+#backgroundImage2{
+	position:absolute;
+    top:15%;	
+	height:75%;
+	width:75%;
+	overflow:hidden;
+	transition:opacity linear 0.5s;
+}
+
+#backgroundImage2.ng-hide {
+  opacity:0;
+}
+
+#borderDiv{
+	position: absolute;
+	top:25%;
+	left:25%;
+	width:50%;
+	height:70%;
+	border:20px solid #6ba7bd;
+	opacity:0.5;
+	transition:left linear 0.5s;
+}
+
+#borderDiv.ng-hide{
+	left:-50%;
+}
+
+#contentDiv{
+	padding:2%;
+	background-color: #6ba7bd;
+	position: absolute;
+	left:70%;
+	height:60%;
+	width:30%;
+	top:30%;
+    transition: 0.5s left linear 0.5s;
+}
+
+#contentDiv.ng-hide{
+	left:100%;
+}
+
+#contentDiv > h1{
+color:white;
+font-family: 'Nixie One', cursive;
+font-size: 16px;
+text-transform: uppercase;
+
+}
+
+#contentDiv>ul {
+  list-style-type: none;
+  padding:0;
+  font-size: 16px;
+}
+
+#contentDiv>ul>li{
+	color:#000;
+	margin-top: 10%;
+	background-color: rgba(255,255,255,0.5);
+	padding-left:5%;
+	padding-right:5%;
+	
+}
+#contentDiv>ul>li>p{
+	display:none;
+	color:#696969;
+font-family: 'Raleway', sans-serif;
+font-size: 14px;
+padding-bottom:5%;
+transition:height linear 0.5s;;
+}
+
+#contentDiv>ul>li:hover >p,#contentDiv>ul>li:hover >p{
+	display:block;
+}
+
+#contentDiv>ul>li>span{
+
+    font-size: 20px;
+	text-transform: uppercase;
+}
+
+
+
+#aboutUs{
+	position: relative;
+	margin-left:25%;
+	opacity:1;
+	transition:opacity linear 0.5s;
+}
+
+#aboutUs.ng-hide{
+	opacity:0;
+}
+
+#aboutUs > h1{
+	font-family: 'Lobster', cursive;
+	color:#000;
+}
+
+#aboutUs > h4{
+	font-family: 'Raleway', sans-serif;
+	color:#36545f;;
+}
+
+#productPage{
+margin-left:25%;
+}
+
+#productsPage > #cartButton{
+position: absolute;
+right: 10px;
+z-index: 500;
+opacity: 0;
+transition:opacity linear 0.5s;
+	height: 40px;
+	width: 40px;
+	
+
+}
+
+#productsPage > #cartButton .glyphicon{
+	top: 5px;
+	font-size: 20px;
+}
+
+#productPage > h1{
+color:#000;
+text-align: center;
+text-transform:uppercase;
+}
+
+#productPage #pdtContainer{
+	border:20px solid #B5D3DE;
+	height:70vh;
+	width:100%;
+	margin-top: 6%;
+}
+
+#productPage #windowDiv
+{
+	position: relative;
+	height:25%;
+	width:100%;
+	overflow-x:hidden;
+	border-top:2px solid #B5D3DE;
+	border-bottom:2px solid #B5D3DE;
+}
+
+#productPage #windowDiv > .arrowContainer{
+position: absolute;
+z-index: 100;
+height: 100%;
+background-color: #E7E5DF;
+width:50px;
+}
+
+#productPage #windowDiv .blackGlassButton{
+	height:40px;
+	width: 40px;
+margin-left:6px;
+margin-top:50%;
+}
+
+#productPage #windowDiv .blackGlassButton >span{
+	color:white;
+	font-size: 25px;
+}
+
+#productPage #scroller{
+	position:absolute;
+	height:100%;
+	transition: left 0.5s linear;
+	
+
+}
+
+#productPage #pdtContainer .row{
+height:75%;
+margin:0;
+}
+
+#productPage #pdtContainer .row > .col-xs-6{
+	
+	height:100%;
+	padding:0;
+}
+
+#productPage #pdtContainer .row > .col-xs-6 > img{
+height:100%;
+width:100%;
+}
+
+#productPage #scroller img{
+	width:120px;
+	padding:1%;
+	height:100%;
+
+}
+
+#productPage #scroller img.selected{
+	padding:0;
+	border:solid 1px #000;
+}
+
+#productPage #scroller img:hover{
+	padding:0;
+	border:solid 1px #000;
+}
+
+#productPage #pdtContainer .row > .col-xs-6 > h3{
+	text-align: center;
+	font-family: 'Lobster', cursive;
+	color:#000;
+
+}
+
+#productPage #pdtContainer .row > .col-xs-6 > p{
+	padding-left:10px;
+	padding-right:10px;
+	text-align: justify;
+}
+
+#productPage #pdtContainer #footerDiv{
+	position: absolute;
+	bottom: 5%;
+	width:100%;
+	padding-left: 10px;
+}
+
+ .Rect{
+	margin:0 ; 
+	border-radius: 10%;
+	width:initial ;
+	height:30px ;
+	height:5vh ;
+	color:white ;
+	font-family: 'Harmattan', sans-serif;
+	font-size: 15px;
+
+}
+
+.Rect::after{
+	border-radius: 20% !important;
+	left:8%;
+	width:85%;
+}
+
+#productPage #pdtContainer .row > .col-xs-6 > span{
+	float: left;
+padding-left: 10px;
+padding-top:5px;
+}
+
+#productPage #pdtContainer .row > .col-xs-6  .customSpinner{
+	position: relative;
+	float: left;
+padding-left: 10px;
+}
+
+#productPage #pdtContainer .row > .col-xs-6  .customSpinner .form-control{
+	height:30px;
+	width:30px;
+	padding-left:5px;
+	padding-right: 0;
+	background-color: #E7E5DF;
+}
+
+#productPage #pdtContainer .row > .col-xs-6  .customSpinner .arrow-up{
+	position: absolute;
+	top:6px;
+	left:45px;
+}
+
+#productPage #pdtContainer .row > .col-xs-6  .customSpinner .arrow-down{
+	position: absolute;
+	top:20px;
+	left:45px;
+}
+
+#cartPage{
+	position:absolute;
+	width:30%;
+	background-color: #6ba7bd;
+	height:90%;
+	top:5%;
+	padding-left:1%;
+}
+
+#cartPage > .crossButton{
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	font-size: 20px;
+}
+
+#cartPage > h1{
+	color: white;
+	text-transform: uppercase;
+	font-size:25px;
+	height: 40px;
+}
+
+#cartPage > h1 > .glyphicon{
+	font-size:20px;
+}
+
+/*#cartPage > .row{
+margin:0;
+}
+*/
+#cartPage > .cartItems{
+	font-family: 'Lobster', cursive;
+	font-size: 18px;
+	width:85%;
+}
+
+.crossButton{
+cursor: pointer;
+}
+
+.crossButton:hover{
+	color: #B5D3DE;
+}
+ 
+#cartPage .cartItems.ng-enter{
+position: absolute;
+left: -100%;
+transition: left 1s linear;
+}
+
+#cartPage .cartItems.ng-enter.ng-enter-active{
+	left:2%;
+}
+.cartItemsLi.ng-enter{
+opacity: 0;
+transition: opacity 1s linear;
+}
+
+.cartItemsLi.ng-enter-active{
+opacity: 1;
+}
+
+.cartItemsLi.ng-leave{
+opacity: 1;
+transition: opacity 0.5s linear;
+}
+
+.cartItemsLi.ng-leave-active{
+opacity: 0;
+}
+
+#cartPage > .table .btn-primary{
+	margin-top:20%;
+}
+
+
+.modalBody{
+	position: absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+    z-index:9999;
+}
+
+.modalBody > .modalBackgound{
+	position:absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+	background-color: #ffffff;
+	opacity: 0.8;
+
+
+}
+
+.modalBody > .dialogBox{
+	z-index:10000;
+  position: absolute;
+  width: 50%; /* Default */
+
+  /* Center the dialog */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*-webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);*/
+
+  background-color: #fff;
+  box-shadow: 4px 4px 80px #000;
+}
+
+.modalBody > .dialogBox >.crossButton{
+	position: absolute;
+  top: 3px;
+  right: 5px;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 120%;
+
+}
+
+.modalBody > .dialogBox > .modalContent {
+  padding:10px;
+  text-align: left;
+}
+
+.modalBody > .dialogBox > .modalContent > h1{
+font-size:25px;
+}
+
+
+#recipesPage{
+
+}
+
+#recipesPage > h1{
+	text-transform: uppercase;
+	text-align: center;
+}
+
+my-slider{
+	position: relative;
+	background-color:#B5D3DE;
+}
+my-slider .col-xs-6
+{
+	padding:0;
+}
+my-slider img
+{
+	height:100%;
+	width:100%;
+}
+
+my-slider > div >.verticalScroll
+{
+	border:15px solid #6BA7BD;
+	overflow: auto;
+	padding:0;
+	}
+
+my-slider .col-xs-12{
+	padding:0;
+}
+
+my-slider >  div > .horizontalScroll
+{
+	overflow-y: scroll;
+	overflow-x: scroll;
+  position:absolute;
+  top:0;
+  left:50%;
+	padding:0;
+
+}
+
+
+/*my-slider >div >.col-xs-6 > .container{
+position:absolute;
+left:-500px;
+}*/
+
+my-slider >div >.col-md-6 > .container{
+	padding:0;
+}
+
+my-slider >div >.col-md-6 > .container>.descriptionSlider{
+
+	position:absolute;
+	display: inline-block;
+	width:100%;
+	height:100%;
+	overflow-y:scroll;
+	padding:0 10% 0 10%;
+
+
+}
+
+#verticalSlider img{
+	height:100%;
+}
+
+#verticalSlider::-webkit-scrollbar { 
+     width: 0px;  /* remove scrollbar space */
+    background: transparent; 
+}
+
+#horizontalSlider::-webkit-scrollbar { 
+	margin-bottom:10px;
+     width: 0px;  /* remove scrollbar space */
+    background: transparent; 
+}
+
+#parentSlider
+{
+	position: relative;
+}
+
+my-slider  h1{
+	font-family: 'Lobster', cursive;
+	color:#000;
+    text-align: center;
+}
+
+my-slider h4{
+	font-family: 'Raleway', sans-serif;
+	color:#000;
+	font-size: 15px;
+	margin-top: 5%;
+
+}
+
+
+my-slider .ingredients::before { 
+    content: "Ingredients : ";
+    font-weight: bold;
+    color:black;
+    text-decoration: underline;
+
+}
+
+my-slider .instructions::before { 
+    content: "Instructions : ";
+    font-weight: bold;
+    color:black;
+    text-decoration: underline;
+}
+
+my-slider .instructions{
+	padding:0;
+}
+
+my-slider .instructions > li{
+	margin-left:1em;
+}
+
+/*----------MOBILE PHONES---------*/
+@media (max-width: 576px){
+
+
+.mobile-invisible{
+display:none !important;
+}
+
+
+#contactDiv >  .blackGlassButton > i{
+	font-size: 20px;
+}
+
+#pdtContainer > .row > #imageBox{
+	display: none;
+}
+
+#pdtContainer > .row > #descriptionBox{
+	width: 100%;
+}
+}
+
+
+/*----- bootsraps mobile phone size-------*/
+
+@media (max-width: 767px){
+
+	h1{
+		font-size: 25px;
+	}
+#contactDiv{
+left:0;
+display:flex;
+}
+
+#contactDiv > .blackGlassButton{
+margin:auto;
+height:40px;
+width:40px;
+}
+
+#contactDiv >  .blackGlassButton{
+display: inline-block;
+height:40px;
+width:40px;
+}
+
+#contactDiv >  .blackGlassButton > i{
+	font-size: 20px;
+}
+
+#aboutUs{
+	margin-left: 0;
+	text-align: center;
+}
+#aboutUs > h1{
+	font-size: 25px;
+}
+
+#aboutUs > h4{
+	font-size: 15px;
+}
+
+#contentDiv{
+	left: 10%;
+	width:80%;
+}
+
+#borderDiv{
+	left: 3%;
+	width:94%;
+
+}
+
+#productPage{
+	margin-left: 0;
+	height: 100%;
+}
+
+#productPage #pdtContainer{
+	height: 90%;
+}
+
+#productsPage > #cartButton{
+	opacity: 1;
+}
+
+#cartPage{
+	display: none;
+	top:0;
+	right:0;
+	padding-left: 5%;
+	width: 90%;
+	z-index:1000;
+}
+
+
+
+my-slider >div >.col-md-6 > .container>.descriptionSlider > h1{
+	font-size: 25px;
+}
+}
+
+@media (min-width: 768px)
+{
+.navbar-nav{
+  margin-left:30%;
+  width:70%;
+	}
+
+.navbar-nav>li{
+width:14%;
+}
+
+.navbar-nav>li>a{
+width:14%;
+}
+
+}
+
+@media (min-width:576px) and (max-width: 767px){
+
+#welcomeDiv  h1{
+	font-size:2.5em;
+	font-weight:600;
+}
+
+#welcomeDiv > .navCircles{
+
+	margin-left: 45%;
+}
+}
+
+@media (max-width: 991px)
+{
+	my-slider >  div > .horizontalScroll{
+		left:0;
+	}
+
+    my-slider >div >.col-md-6 > .container>.descriptionSlider > h1{
+    	margin-top:40px;
+    }
+
+	my-slider >div >.col-md-6 > .container>.descriptionSlider > img{
+		width:25%;
+		height: 25%;
+		float: left;
+	}
+
+	my-slider h4{
+		clear:left;
+		padding-top: 20px;
+	}
+}
+
+@media (max-width: 576px){
+#welcomeDiv > .navCircles{
+
+	margin-left: 40%;
+}
+	#welcomeDiv  h1{
+	font-size:2em;
+	font-weight:400;
+}
+
+#welcomeDiv  h2{
+ font-size:24px;
+ margin-top: 15vh;
+}
+
+my-slider >div >.col-md-6 > .container>.descriptionSlider > img{
+	height: 20%;
+
+}
+}
+
+
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script data-require="jquery@*" data-semver="3.1.1" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      // Code goes here
+
+$(function(){
+$('#groups').on('change', function(){
+  alert("ch")
+    var val = $(this).val();
+    var sub = $('#sub_groups');
+    $('option', sub).filter(function(){
+        if (
+             $(this).attr('data-group') === val 
+          || $(this).attr('data-group') === 'SHOW'
+        ) {
+          if ($(this).parent('span').length) {
+            $(this).unwrap();
+          }
+        } else {
+          if (!$(this).parent('span').length) {
+            $(this).wrap( "<span>" ).parent().hide();
+          }
+        }
+    });
+});
+$('#groups').trigger('change');
+});
+
+$(function() {
+  $('#sub_groups').change(function(){
+    $('.messages').hide();
+    $('#' + $(this).val()).show();
+  });
+});
+    </script>
+    <style>
+.messages {color: #000; display: none;}
+    </style>
+  </head>
+
+  <body>
+    <select id="groups">
+      <option value="0">Select 1</option>
+      <option value="zone1">main group 1</option>
+      <option value="zone2">main group 2</option>
+      <option value="zone3">main group 3</option>
+    </select>
+    <select id="sub_groups">
+      <option data-group="SHOW" value="0">Select 2</option>
+      <option data-group="zone1" value="message1">option 1 </option>
+      <option data-group="zone1" value="message1">option 2 </option>
+      <option data-group="zone2" value="message2">option 3 </option>
+      <option data-group="zone2" value="message2">option 4 </option>
+      <option data-group="zone3" value="message3">option 5 </option>
+      <option data-group="zone3" value="message4">option 6 </option>
+    </select>
+    <div class="output">
+      <div id="message1" class="messages">message 1</div>
+      <div id="message2" class="messages">message 2</div>
+      <div id="message3" class="messages">message 3</div>
+      <div id="message4" class="messages">message 4</div>
+    </div>
+  </body>
+
+</html>

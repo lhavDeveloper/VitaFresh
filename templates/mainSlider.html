@@ -1,0 +1,10 @@
+<div id="welcomeDiv" >
+  <div class="sliderDivs" ng-repeat="q in quotes" ng-if="q.class">
+  <h2>vita fresh</h2>
+  <hr/>
+  <h1> {{q.quote1}} <span>{{q.quote2}}</span></h1>
+  </div>
+  <div class="navCircles">
+    <a ng-repeat="q in quotes" ng-click="changeSlide($index)" ng-class="{ 'active' : q.class}"></a>
+  </div>
+  </div>

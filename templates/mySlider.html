@@ -1,0 +1,24 @@
+<div id="parentSlider" style="height:85vh; width:90vw; margin-left:5vw; margin-right: 5vw">
+<div id="verticalSlider" class=" verticalScroll scroll" style="height: 100%; width:100%;">
+<div class="col-xs-12" style="height: 100%" ng-repeat="i in info">
+<img class="col-xs-6 visible-md visible-lg"  ng-src="{{i.imageUrl}}"/>
+<!-- <div class="col-xs-6" style=" height: 100%; background-color:#B5D3DE;" ></div> -->
+</div>
+</div>
+<div id="horizontalSlider" class="col-xs-12 col-md-6 horizontalScroll scroll" style="top:15px;height: calc(100% - 15px);">
+<div class="container" style="height: 100%" ng-style="{width: 'calc(50%  * '+ info.length +')'}">
+<div ng-repeat="i in info" style="height:100%" ng-style="{left: ($index*100)+'%'}" class="descriptionSlider">
+<img ng-src="{{i.imageUrl}}" class="visible-xs visible-sm"/>
+<h1>{{i.title}}</h1>
+<h4>{{i.description}}</h4>
+<p class="ingredients">Whole wheat Naan flatbread(1),Extra virgin olive oil(1 tsp),Grape tomatoes(6),Whole wheat Naan flatbread(1),Extra virgin olive oil(1 tsp),Grape tomatoes(6),Whole wheat Naan flatbread(1),Extra virgin olive oil(1 tsp),Grape tomatoes(6)</p>
+<ul class="instructions">
+	<li>Preheat toaster oven or oven to 400 F.</li>
+	<li>Place flatbread on an ungreased cookie sheet and brush (or spray) each side of flatbread with oil. Sprinkle with 1/2 teaspoon Za’atar seasoning.</li>
+	<li>Bake flatbread at 400 F for 7 to 8 minutes until golden and crisp on the edges. Allow flatbread to cool 3 to 4 minutes before topping.</li>
+	<li>While the flatbread cools mix together the artichoke hearts, Kalamata olives, tomatoes, cucumber, bell peppers and shallot in a small bowl. Drizzle with the lemon juice and add remaining 1/4 teaspoon Za’atar seasoning. Stir well to combine.</li>
+	<li>Spread cooled flatbread with hummus and top with chopped vegetables. Sprinkle with parsley and feta.</li>
+	<li>Use a pizza cutter to easily divide into six slices and enjoy!</li>
+</ul>
+</div></div></div>
+</div>

@@ -1,0 +1,23 @@
+<div id="pdtContainer">
+    <div id="windowDiv">
+    <div class="arrowContainer"><button class="blackGlassButton " ng-click="moveLeft()"><span>&lt;</span></button></div>
+    <div class="arrowContainer" style="right:0;"><button class="blackGlassButton " ng-click="moveRight()"><span>&gt;</span></button></div>
+    <div id="scroller" ng-style="{left:leftIndex+'px', width:totalWidth+'px'}" ng-init="selectedIndex=0">
+        <img ng-repeat="p in products" ng-src="{{p.imageUrl}}" ng-click="selectProduct($index)" ng-class="(selectedIndex==$index) ? 'selected' : 'normal'"/>
+      </div></div>
+      <div class="row">
+        <div id="imageBox" class="col-xs-6">
+        <img ng-src="{{product.imageUrl}}"/>
+      </div>
+      <div id="descriptionBox" class="col-xs-6">
+      <h3>{{product.title}}</h3>
+      <p>{{product.description}}</p>
+      <p>Price : Rs {{product.price}}</p>
+      <span>Quantity : </span>
+      <my-spinner spinner-value="quantity"></my-spinner>
+      <div id="footerDiv">
+        <button type="button" class="blackGlassButton Rect" ng-click="addToCart()">Add to cart</button>
+      </div>
+      </div>
+    </div>
+  </div>
