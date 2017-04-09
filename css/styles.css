@@ -2,7 +2,7 @@ body
 {
 background-color: white;
 font-family: 'Harmattan', sans-serif;
-color:#36545f;
+color:#2F2F2F;
 box-sizing: border-box;
 }
 
@@ -71,6 +71,10 @@ h1{
 	overflow:hidden;
 }
 
+#mainPage > .backgroundImage{
+	opacity:0.3;
+}
+
 #topStrip .glyphicon
 {
 color:white;
@@ -122,15 +126,19 @@ padding-left: 10px;
 padding-right: 10px;
 }
 
+.navbar-default .navbar-toggle .icon-bar{
+	background-color: #000;
+}
+
 .navbar-header
 {
 	margin-left:15px;
 }
 
 .navbar-default {
-	background-color:black;
-	background-color:rgba(107, 167, 189, 0.3);
-	border-color: rgba(107, 167, 189, 0.3);
+	background-color:rgba(0,81,0,0.4);
+	border-color: rgba(0,81,0,0.4);
+	border-radius: 0;
 	}
 
 .navbar-default .navbar-nav>li>a
@@ -293,8 +301,8 @@ left:-100%;
 	left:25%;
 	width:50%;
 	height:70%;
-	border:20px solid #6ba7bd;
-	opacity:0.5;
+	border:20px solid #005100;
+	opacity:0.3;
 	transition:left linear 0.5s;
 }
 
@@ -304,7 +312,7 @@ left:-100%;
 
 #contentDiv{
 	padding:2%;
-	background-color: #6ba7bd;
+	background-color: #688F61;
 	position: absolute;
 	left:70%;
 	height:60%;
@@ -383,6 +391,7 @@ transition:height linear 0.5s;;
 
 #productPage{
 margin-left:25%;
+transition:all linear 0.5s;
 }
 
 #productsPage > #cartButton{
@@ -409,7 +418,7 @@ text-transform:uppercase;
 }
 
 #productPage #pdtContainer{
-	border:20px solid #B5D3DE;
+	border:20px solid #A8BFA6;
 	height:70vh;
 	width:100%;
 	margin-top: 6%;
@@ -559,7 +568,7 @@ padding-left: 10px;
 #cartPage{
 	position:absolute;
 	width:30%;
-	background-color: #6ba7bd;
+	background-color: #688F61;
 	height:90%;
 	top:5%;
 	padding-left:1%;
@@ -715,7 +724,7 @@ my-slider img
 
 my-slider > div >.verticalScroll
 {
-	border:15px solid #6BA7BD;
+	border:15px solid #688F61;
 	overflow: auto;
 	padding:0;
 	}
