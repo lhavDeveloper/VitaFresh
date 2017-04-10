@@ -651,6 +651,7 @@ opacity: 0;
 	height:100%;
 	width:100%;
     z-index:9999;
+    display: flex;
 }
 
 .modalBody > .modalBackgound{
@@ -661,24 +662,17 @@ opacity: 0;
 	width:100%;
 	background-color: #ffffff;
 	opacity: 0.8;
-
+    z-index:-1;
 
 }
 
 .modalBody > .dialogBox{
-	z-index:10000;
-  position: absolute;
-  width: 50%; /* Default */
-
-  /* Center the dialog */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /*-webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);*/
-
+  width: 90%; /* Default */
+  margin:auto;
   background-color: #fff;
   box-shadow: 4px 4px 80px #000;
+  max-height: 90%;
+  overflow: auto;
 }
 
 .modalBody > .dialogBox >.crossButton{
@@ -852,7 +846,6 @@ display:none !important;
 /*----- bootsraps mobile phone size-------*/
 
 @media (max-width: 767px){
-
 	h1{
 		font-size: 25px;
 	}
@@ -942,6 +935,11 @@ width:14%;
 
 .navbar-nav>li>a{
 width:14%;
+}
+
+
+.modalBody > .dialogBox{
+	width: 100%;
 }
 
 }
